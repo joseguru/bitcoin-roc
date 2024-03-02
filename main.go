@@ -10,8 +10,8 @@ func main(){
 connConf:= &rpcclient.ConnConfig{
 
 	Host:         "localhost:38332",
-		User:         "joseguru",
-		Pass:         "_Uzt0IvkJFWHYXH_KoX5IygcJVrnGrp1N6YenFBgHfo",
+		User:         "",
+		Pass:         "",
 		HTTPPostMode: true, // Bitcoin core only supports HTTP POST mode
 		DisableTLS:   true,
 }
