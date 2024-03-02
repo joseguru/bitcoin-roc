@@ -1,7 +1,7 @@
 # bitcoin-rpc
 Connect to bitcoind using btcsuite rpcclient
 
-$ go get github.com/btcsuite/btcd/rpcclient
+    $ go get github.com/btcsuite/btcd/rpcclient
 
 Next, modify the main.go source to specify the correct RPC username and password for the RPC server:
 
