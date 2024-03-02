@@ -2,16 +2,25 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/btcsuite/btcd/rpcclient"
+	"github.com/joho/godotenv"
 )
+func goDotEnvVariable(key string) string{
+	err:=godotenv.Load(".env")
+	if err != nil {
+    log.Fatalf("Error loading .env file")
+  }
 
+  return os.Getenv(key)
+}
 func main(){
 connConf:= &rpcclient.ConnConfig{
 
-	Host:         "localhost:38332",
-		User:         "",
-		Pass:         "",
+	Host:         goDotEnvVariable("host"),
+		User:         goDotEnvVariable("user"),
+		Pass:         goDotEnvVariable("pass"),
 		HTTPPostMode: true, // Bitcoin core only supports HTTP POST mode
 		DisableTLS:   true,
 }
